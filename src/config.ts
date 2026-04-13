@@ -2,8 +2,8 @@ export const SITE = {
   website: "https://realhatefk.me/",
   author: "Hatef Kasraei",
   profile: "https://realhatefk.me/",
-  desc: "Building dclaw and other infrastructure. Notes on AI agents, Docker, and the tools I ship.",
-  title: "realhatefk.me",
+  desc: "i post about programming, technology, and sometimes my personal life.",
+  title: "Hatef Kasraei",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
@@ -19,5 +19,5 @@ export const SITE = {
   dynamicOgImage: true,
   dir: "ltr", // "rtl" | "auto"
   lang: "en", // html lang code. Set this empty and default will be "en"
-  timezone: "UTC", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  timezone: "CST", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 } as const;

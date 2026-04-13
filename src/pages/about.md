@@ -1,12 +1,14 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "About"
+title: "About Hatef"
 ---
 
-Hi, I'm Hatef.
+hi, i'm @realhatefk.
 
-I build infrastructure for AI agents — most recently [dclaw](https://github.com/realhatefk/dclaw), a container-native multi-agent platform with mandatory sandboxing.
+i build random projects, based on whatever pops to my head. could be an app, web service, or even an ai agent.
 
-This site is where I write about what I ship.
+this is where i post my thoughts, discoveries, or even if i learned something cool. all thoughts are my own. i try not to use ai for these things because i value the personal touch. if you want ai written posts, you can find those on twitter/x. 
 
-Find me on [GitHub](https://github.com/realhatefk), [X](https://x.com/realhatefk), and [LinkedIn](https://www.linkedin.com/in/hatefkasraei/).
+thanks for reading!
+
+find me on [GitHub](https://github.com/realhatefk), [X](https://x.com/realhatefk), and [LinkedIn](https://www.linkedin.com/in/hatefkasraei/).
