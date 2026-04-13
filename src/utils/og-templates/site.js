@@ -61,76 +61,47 @@ export default async () => {
                   style: {
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "space-between",
+                    justifyContent: "center",
+                    alignItems: "center",
                     margin: "20px",
                     width: "90%",
                     height: "90%",
+                    overflow: "hidden",
+                    textAlign: "center",
                   },
                   children: [
                     {
-                      type: "div",
+                      type: "img",
                       props: {
+                        src: avatarDataUri,
+                        width: 180,
+                        height: 180,
                         style: {
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "center",
-                          alignItems: "center",
-                          height: "90%",
-                          maxHeight: "90%",
-                          overflow: "hidden",
-                          textAlign: "center",
+                          width: 180,
+                          height: 180,
+                          borderRadius: "50%",
+                          border: "4px solid #000",
+                          marginBottom: 24,
+                          objectFit: "cover",
                         },
-                        children: [
-                          {
-                            type: "img",
-                            props: {
-                              src: avatarDataUri,
-                              width: 180,
-                              height: 180,
-                              style: {
-                                width: 180,
-                                height: 180,
-                                borderRadius: "50%",
-                                border: "4px solid #000",
-                                marginBottom: 24,
-                                objectFit: "cover",
-                              },
-                            },
-                          },
-                          {
-                            type: "p",
-                            props: {
-                              style: { fontSize: 72, fontWeight: "bold", margin: 0 },
-                              children: SITE.title,
-                            },
-                          },
-                          {
-                            type: "p",
-                            props: {
-                              style: { fontSize: 28, marginTop: 12 },
-                              children: SITE.desc,
-                            },
-                          },
-                        ],
                       },
                     },
                     {
-                      type: "div",
+                      type: "p",
                       props: {
                         style: {
-                          display: "flex",
-                          justifyContent: "flex-end",
-                          width: "100%",
-                          marginBottom: "8px",
-                          fontSize: 28,
+                          fontSize: 72,
+                          fontWeight: "bold",
+                          margin: 0,
                         },
-                        children: {
-                          type: "span",
-                          props: {
-                            style: { overflow: "hidden", fontWeight: "bold" },
-                            children: new URL(SITE.website).hostname,
-                          },
-                        },
+                        children: "@realhatefk",
+                      },
+                    },
+                    {
+                      type: "p",
+                      props: {
+                        style: { fontSize: 28, marginTop: 12, marginBottom: 0 },
+                        children: SITE.desc,
                       },
                     },
                   ],
@@ -145,7 +116,7 @@ export default async () => {
       width: 1200,
       height: 630,
       embedFont: true,
-      fonts: await loadGoogleFonts(SITE.title + SITE.desc + SITE.website),
+      fonts: await loadGoogleFonts(SITE.desc + "@realhatefk"),
     }
   );
 };
