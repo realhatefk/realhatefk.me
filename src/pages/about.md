@@ -4,7 +4,7 @@ title: "About Hatef"
 ---
 
 <img
-  src="/images/realhatefk.png"
+  src="/images/about-photo.jpg"
   alt="Hatef Kasraei"
   class="w-full md:w-56 md:float-right md:ml-6 md:mb-4 mb-6 rounded-lg"
 />
