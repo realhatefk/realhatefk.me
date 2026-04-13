@@ -1,14 +1,18 @@
 ---
-author: Hatef Kasraei
-pubDatetime: 2026-04-13T00:00:00Z
-title: "Hello, world."
-featured: true
-draft: false
+title: '"Hello, world!" - my rant.'
+author: hatef
+pubDatetime: 2026-04-12T22:18:00.000Z
+description: does anyone still write hello world?
 tags:
   - meta
-description: "First post. More coming soon — starting with a writeup of dclaw v0.1.0."
+featured: true
+draft: false
+hideEditPost: false
 ---
+what a cliche: "hello, world"! reminds me of reading this old ass book from 1989 on c programming during my internship. well, it was more of a research work than an internship but still. now i'm thinking who would ever do that? like most new devs might only say hi to their ai agents.
 
-Placeholder post. The real first post will be a writeup of [dclaw](https://github.com/realhatefk/dclaw) v0.1.0 — how I sandboxed Claude Code agents inside Docker containers with mandatory sandboxing, a sentinel-file isolation test, and a control-plane / data-plane split.
+```
+$ claude -p "say hi."
+```
 
-Coming in the next few days.
+maybe this really is an end of era.
