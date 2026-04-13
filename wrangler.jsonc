@@ -3,7 +3,11 @@
   "name": "realhatefk-me",
   "compatibility_date": "2025-04-01",
   "assets": {
-    "directory": "./dist",
+    // Astro writes prerendered static output under `dist/client/` when an
+    // adapter is present (we use @astrojs/node to satisfy Keystatic's SSR
+    // requirement during local dev). Cloudflare Pages continues to serve the
+    // static site only — the `dist/server/` SSR bundle is unused in prod.
+    "directory": "./dist/client",
     "not_found_handling": "404-page"
   }
 }

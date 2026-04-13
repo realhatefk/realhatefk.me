@@ -2,7 +2,6 @@
 author: Hatef Kasraei
 pubDatetime: 2026-04-13T00:00:00Z
 title: "Hello, world."
-slug: hello-world
 featured: true
 draft: false
 tags:

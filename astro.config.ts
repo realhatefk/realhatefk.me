@@ -1,6 +1,10 @@
 import { defineConfig, envField, fontProviders } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
+import react from "@astrojs/react";
+import markdoc from "@astrojs/markdoc";
+import keystatic from "@keystatic/astro";
+import node from "@astrojs/node";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import {
@@ -14,7 +18,17 @@ import { SITE } from "./src/config";
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
+  // `output: 'static'` (default) keeps the whole site prerendered.
+  // Keystatic's integration injects its own routes with `prerender: false`,
+  // so we need an adapter; `@astrojs/node` is used purely for local dev /
+  // `astro build` to satisfy that requirement. Production is deployed to
+  // Cloudflare Pages as pure assets (wrangler.jsonc), so the SSR bundle is
+  // never actually invoked in prod — only the prerendered `dist/` is served.
+  adapter: node({ mode: "standalone" }),
   integrations: [
+    react(),
+    markdoc(),
+    keystatic(),
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
     }),
@@ -42,6 +56,12 @@ export default defineConfig({
     plugins: [tailwindcss()],
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
+    },
+    ssr: {
+      // Native-binary packages must not be bundled for SSR — keep them external
+      // so the Node adapter resolves them at runtime instead of Rollup/esbuild
+      // trying to inline the `.node` binary.
+      external: ["@resvg/resvg-js", "sharp"],
     },
   },
   image: {
