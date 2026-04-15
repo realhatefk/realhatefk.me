@@ -1,7 +1,7 @@
 export const SITE = {
-  website: "https://realhatefk.me/",
+  website: "https://itsmehatef.me/",
   author: "Hatef Kasraei",
-  profile: "https://realhatefk.me/",
+  profile: "https://itsmehatef.me/",
   desc: "i post about programming, technology, and sometimes my personal life.",
   title: "Hatef Kasraei",
   ogImage: "",
