@@ -6,7 +6,7 @@ description: how --dangerously-skip-permissions wiped my home directory, and wha
 tags:
   - agents
   - claude-code
-featured: false
+featured: true
 draft: false
 hideEditPost: false
 ---
