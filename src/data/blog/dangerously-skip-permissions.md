@@ -19,7 +19,7 @@ lessons learned.
 
 ## why this happened?
 
-so the project im working on has a home variable where it defines the home directory of the build. after a build failure it tried to clean it and it cleaned it alright (:
+so the project im working on has a home variable where it defines the home directory of the build. after a build failure it tried to clean it and it cleaned it alright 🙂
 
 ## lesson learned
 
